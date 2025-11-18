@@ -14,9 +14,9 @@ Conducted a comprehensive analysis of Support Vector Machine (SVM) kernels to un
 This project focuses on two core machine learning concepts using `scikit-learn` and Support Vector Machines (SVMs):
 
 1.  **Part 1 (`svm_dataset1.py`): The Kernel Trick**
-    * Demonstrates *why* different kernels are necessary by applying `Linear`, `Polynomial`, and `RBF` kernels to a non-linearly separable "circles" dataset.
+    * Demonstrates *why* different kernels are necessary by applying `Linear`, `Polynomial`, and `RBF` kernels to a non-linearly separable "circles" dataset.
 2.  **Part 2 (`svm_dataset2.py`): The Preprocessing Pipeline**
-    * Implements a methodologically sound pipeline using `GridSearchCV` that integrates `StandardScaler` (for feature scaling) *inside* the cross-validation loop to prevent data leakage and find the optimal hyperparameters.
+    * Implements a methodologically sound pipeline using `GridSearchCV` that integrates `StandardScaler` (for feature scaling) *inside* the cross-validation loop to prevent data leakage and find the optimal hyperparameters.
 
 ---
 
@@ -56,15 +56,15 @@ This `Pipeline` object is then passed to `GridSearchCV`. `GridSearchCV` handles 
 ```python
 # 1. Define the preprocessing and model steps
 pipeline = Pipeline([
-    ('scaler', StandardScaler()),
-    ('svm', SVC())
+    ('scaler', StandardScaler()),
+    ('svm', SVC())
 ])
 
 # 2. Define the hyperparameter grid to search
 # (Note: 'svm__C' syntax accesses parameters of the 'svm' step in the pipeline)
 param_grid = {
-    'svm__kernel': ['linear', 'rbf', 'poly'],
-    'svm__C': [0.01, 1, 100]
+    'svm__kernel': ['linear', 'rbf', 'poly'],
+    'svm__C': [0.01, 1, 100]
 }
 
 # 3. Set up the grid search with cross-validation
