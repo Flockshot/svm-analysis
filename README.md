@@ -27,16 +27,12 @@ This experiment uses a synthetic "circles" dataset where one class is nested ins
 ### The Problem: Linear Kernel
 A standard SVM with a linear kernel attempts to find the "best" straight line (or hyperplane) to separate the two classes. On this dataset, it fails, resulting in high misclassification.
 
-> **[Image: Plot of the Linear SVM kernel (linear_100.png)]**
->
-> *(**Developer Note:** Place your `linear_100.png` image here. It perfectly shows the linear kernel's failure.)*
+![Image: Plot of the Linear SVM kernel (linear_100.png)](figs/linear_100.png)
 
 ### The Solution: RBF Kernel
 The **Radial Basis Function (RBF) kernel** works by projecting the 2D data into a higher-dimensional space where a linear separator *can* be found. When projected back to 2D, this separator becomes a complex, non-linear decision boundary. As shown in the plot, the RBF kernel perfectly separates the two circles.
 
-> **[Image: Plot of the RBF SVM kernel (rbf_100.png)]**
->
-> *(**Developer Note:** Place your `rbf_100.png` image here. It's the "hero shot" that shows the kernel trick working.)*
+![Image: Plot of the RBF SVM kernel (rbf_100.png)](figs/rbf_100.png)
 
 ---
 
